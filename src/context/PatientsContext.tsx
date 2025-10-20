@@ -36,9 +36,7 @@ export const PatientsProvider: React.FC<{ children: React.ReactNode }> = ({ chil
   }
 
   const updatePatient = (p: Patient) => {
-    console.log("patient")
     setPatients((prev) => prev.map((x) => (x.id === p.id ? p : x)))
-    console.log("patient", patients)
   }
 
   const deletePatient = (id: string) => {
