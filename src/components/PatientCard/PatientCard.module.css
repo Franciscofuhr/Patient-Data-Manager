@@ -1,0 +1,45 @@
+.patientCard {
+  height: 72px;
+  cursor: pointer;
+  padding: 8px 16px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 33, 77, 0.24);
+  transition: all 0.22s ease-in;
+}
+
+.patientCard:hover {
+  box-shadow:
+    0 6px 18px 0 rgba(154, 161, 186, 0.2),
+    0 4px 4px 0 rgba(154, 161, 186, 0.24);
+  transform: translateY(-1px);
+}
+
+.patientInformation {
+  display: flex;
+  align-items: center;
+  column-gap: 16px;
+}
+
+.patientAvatarContainer{
+    height: 50px;
+    width: 50px;
+}
+
+.patientAvatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.patientActions {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+}
+
+.seeMoreBtn {
+  border: none;
+  cursor: pointer;
+}

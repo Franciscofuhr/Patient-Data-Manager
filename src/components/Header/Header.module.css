@@ -1,0 +1,44 @@
+.header {
+  width: 100%;
+  box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.13);
+}
+
+.headerContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 50px;
+  cursor: pointer;
+}
+
+.headerNav {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Add Patient Button */
+.addPatientButton {
+  text-align: center;
+  background-color: #3a7afe;
+  height: 48px;
+  width: 146px;
+  padding: 10px 16px;
+  border-radius: 40px;
+  cursor: pointer;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  transition: all ease 0.3s;
+}
+.addPatientButton:hover {
+  background-color: #2e63e6;
+  transform: translateY(-1px);
+}

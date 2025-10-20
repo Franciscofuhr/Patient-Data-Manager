@@ -1,0 +1,97 @@
+.patientListContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 2rem;
+  padding: 0 16px;
+}
+
+.patientList {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  row-gap: 14px;
+  width: 100%;
+}
+
+/* Sorting */
+
+.sortContainer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  max-width: 1200px;
+  gap: 0.5rem;
+  padding-right: 1rem;
+  margin-top: 2rem;
+}
+
+.sortSelect {
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+/* Pagination */
+
+.pagination {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.pageButton {
+  background-color: #f1f1f1;
+  border: none;
+  padding: 0.5rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.pageButton:hover:not(:disabled) {
+  background-color: #e0e0e0;
+}
+
+.pageButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.active {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+}
+/* Empty State */
+
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 20px;
+  color: #444;
+}
+
+.emptyTitle {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.emptyText {
+  font-size: 16px;
+  color: #666;
+  max-width: 340px;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}

@@ -1,0 +1,255 @@
+/* 🔹 Backdrop */
+.modalBackdrop {
+  position: fixed;
+  width: 100vw;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+  animation: backdropFade 0.3s ease forwards;
+}
+
+/* Modal */
+.form {
+  background-color: #fff;
+  margin: 0 8px;
+  padding: 2rem;
+  border-radius: 16px;
+  max-width: 450px;
+  width: 100%;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
+  animation:
+    fadeIn 0.3s ease forwards,
+    scaleIn 0.3s ease forwards;
+  transition: all 0.25s ease-in-out;
+}
+
+/* Close Button */
+.closeButton {
+  border: none;
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  background: transparent;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.closeButton:hover {
+  transform: scale(1.15);
+}
+
+.closeIcon {
+  height: 28px;
+  width: 28px;
+}
+
+/* Titles & Texts*/
+h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-align: center;
+  color: #222;
+  margin-bottom: 0.5rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #444;
+}
+
+input,
+textarea {
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: all ease 200ms;
+}
+
+textarea {
+  resize: vertical;
+  max-width: 100%;
+}
+
+textarea:disabled,
+input:disabled {
+  background-color: #e0e0e0;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #0077ff;
+  box-shadow: 0 0 0 2px rgba(0, 119, 255, 0.15);
+}
+
+.error {
+  color: #e63946;
+  font-size: 0.8rem;
+  margin-top: -2px;
+}
+
+/* Submit button */
+button[type="submit"] {
+  background-color: #3a7afe;
+  color: white;
+  border: none;
+  border-radius: 40px;
+  padding: 0.8rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition:
+    all 0.2s ease,
+}
+
+button[type="submit"]:hover {
+  background-color: #2e63e6;
+  transform: translateY(-1px);
+}
+
+button[type="submit"]:active {
+  transform: translateY(1px);
+}
+
+/* Edit - Delete Buttons*/
+.patientActions {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.editActionContainer button,
+.deleteActionContainer button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.editActionContainer button:hover,
+.deleteActionContainer button:hover {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
+.editActionContainer img {
+  width: 22px;
+  height: 22px;
+  filter: invert(35%) sepia(94%) saturate(1243%) hue-rotate(190deg)
+    brightness(98%) contrast(91%);
+}
+
+.deleteActionContainer img {
+  width: 22px;
+  height: 22px;
+  filter: invert(33%) sepia(97%) saturate(7168%) hue-rotate(348deg)
+    brightness(93%) contrast(93%);
+}
+
+/* Deletion Confirmation */
+.confirmDeletionContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+  padding: 1rem 0;
+  animation: fadeIn 0.3s ease;
+}
+
+.confirmDeletionContainer h3 {
+  font-size: 1.3rem;
+  color: #222;
+  margin-bottom: 0.4rem;
+}
+
+.confirmDeletionContainer p {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.confirmButtons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.cancelBtn {
+  background: #ccc;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.cancelBtn:hover {
+  background: #b5b5b5;
+}
+
+.confirmBtn {
+  background: #e53935;
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.confirmBtn:hover {
+  background: #c62828;
+}
+
+/* Animations */
+@keyframes backdropFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.95);
+  }
+  to {
+    transform: scale(1);
+  }
+}
